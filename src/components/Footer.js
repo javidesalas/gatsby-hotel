@@ -12,9 +12,9 @@ const EnlaceHome = styled(Link)`
     text-decoration: none;
 `;
 
-const Header = () => {
+const Footer = ({title}) => {
     return (
-      <header
+      <footer
         css={css`
           background-color: #222;
           padding: 1rem;
@@ -32,16 +32,16 @@ const Header = () => {
             }
           `}
         >
+            <Navegacion />
           <EnlaceHome to="/">
-            <h1>
-              Hotel Gatsby
-            </h1>
-        </EnlaceHome>
+            <h3>
+              {title}
+            </h3>
+          </EnlaceHome>
 
-          <Navegacion />
         </div>
-      </header>
+      </footer>
     )
 };
 
-export default Header;
+export default Footer;
